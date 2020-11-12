@@ -29,7 +29,7 @@ The implementation occured with [Processing](https://processing.org/) 3.5.4.
 
 
 ## Demo
-![](http://gitlab.inf.fh-flensburg.de/phbo9846/2020-ws-3dcg-philipp-borucki/raw/feature/Aufgabenblatt1/Meilenstein-1/README.assets/image-20201112013944803.png)
+![](Meilenstein-1/README.assets/image-20201112013944803.png)
 
 
 
