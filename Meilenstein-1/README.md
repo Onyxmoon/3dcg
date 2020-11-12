@@ -9,6 +9,9 @@
 > This folder contains the Processing Sketch and other documents for Task Sheet 1 in the 3D Computer Graphics Lab.
 
 ## Task
+[PDF document](Meilenstein-1/Arbeitsblatt1.pdf) for task sheet 1.
+
+**Summary of the task to be processed for the Processing-Sketch**
 
 > For your free work interpretation, choose templates from an artist who created non-object-related works of art (abstract art).
 >
@@ -24,7 +27,8 @@
 
 ## Realization
 
-The implementation occured with [Processing](https://processing.org/) 3.5.4.
+- [PDF document](Meilenstein-1/Borucki_Philipp_3DCG_Aufgabenblatt1.pdf) with solution for the task sheet
+- The implementation occured with [Processing](https://processing.org/) 3.5.4.
 
 
 
