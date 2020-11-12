@@ -1,4 +1,4 @@
-# Laborabgabe
+# Laboratory submission
 <p>
     <img alt="Module: 3DCG" src="https://img.shields.io/badge/Module-3DCG-blueviolet?style=for-the-badge" />
     <img alt="Lecturer: Prof. Dr.-Ing. Knut Hartmann" src="https://img.shields.io/badge/Lecturer-Prof. Dr.--Ing. Knut Hartmann-blue?style=for-the-badge&link=http://gitlab.inf.fh-flensburg.de/hartmannk" /><br/>
@@ -12,19 +12,15 @@
 
 
 
-## Usage
+## Submissions
+- [Meilenstein 1](Meilenstein-1/README.md)
 
-```
-TO-DO
-```
 
 
 
 ## Contact
 
 **Philipp Borucki (philipp.borucki@stud.hs-flensburg.de)**
-
-
 
 
 
