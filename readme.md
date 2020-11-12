@@ -13,7 +13,7 @@
 
 
 ## Submissions
-- [Meilenstein 1](Meilenstein-1/README.md)
+- [Meilenstein 1](Meilenstein-1/)
 
 
 
