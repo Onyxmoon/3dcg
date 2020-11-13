@@ -11,18 +11,6 @@ void draw() {
   //Draw Background
   background(130, 101, 255);
 
-  //Draw text
-  pushMatrix();
-  scale(min(height, width) / 1000f * 2);
-  textFont(createFont("HarabaraMaisDemo.otf", 30));
-  textSize(30);
-  textAlign(LEFT, TOP);
-  text("Computergrafik.", 35, 35);
-  textFont(createFont("aileron.ultralight.otf", 12));
-  textSize(12);
-  text("The leaf count is our main effort in life and shoulb be " + leafs + ". We bend us to " + leafApertureFactor + ".", 35, 75);
-  popMatrix();
-
   //Draw Flower
   pushMatrix();
   noStroke();
@@ -32,7 +20,20 @@ void draw() {
   Flower f = new Flower();
   f.setLeafs(leafs);
   f.leafApertureFactor = leafApertureFactor;
+  f.breathe = true;
   f.render();
+  popMatrix();
+
+  //Draw text
+  pushMatrix();
+  scale(min(height, width) / 1000f * 2);
+  textFont(createFont("HarabaraMaisDemo.otf", 30));
+  textSize(30);
+  textAlign(LEFT, TOP);
+  text("Computergrafik.", 35, 35);
+  textFont(createFont("aileron.ultralight.otf", 12));
+  textSize(12);
+  text("The leaf count is our main effort in life and shoulb be " + leafs + ". We bend us to " + f.leafApertureFactor + ".", 35, 75);
   popMatrix();
 
   //Mouse press
