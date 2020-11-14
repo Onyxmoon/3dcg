@@ -1,20 +1,20 @@
 class Leaf {
   
   public float apertureFactor = 300;
-  public float length = 100;
+  public float leafLength = 100;
   
   public Leaf() {
   }
 
   public void render() {
     pushMatrix();
-    translate(length - 30, -leafParabel(100));
+    translate(leafLength - 30, -leafParabel(leafLength));
     beginShape(POLYGON);
-    for (float f = -length; f <= length; f += 1) {
+    for (float f = -leafLength; f <= leafLength; f += 1) {
       vertex(f, leafParabel(f));
     }
-    for (float f = length; f >= -length; f -= 1) {
-      vertex(f, leafParabel(f) * -1 + leafParabel(100) * 2);
+    for (float f = leafLength; f >= -leafLength; f -= 1) {
+      vertex(f, leafParabel(f) * -1 + leafParabel(leafLength) * 2);
     }
     endShape();
     popMatrix();

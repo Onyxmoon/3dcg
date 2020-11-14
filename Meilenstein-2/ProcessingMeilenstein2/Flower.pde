@@ -2,11 +2,24 @@ class Flower {
   //Flower attributes
   private int leafs = 8;
   private float stepAngle = TWO_PI / leafs;
-  public boolean breathe = false;
 
   //Leaf attributes
   public float leafApertureFactor = 300;
   public float leafLength = 100;
+
+  //Breath attributes
+  public boolean breath = false;
+  public float breathDuration = 400;
+  public float breathWeaknessFactor = 1200;
+  private float breathCurrentTimeStep = 0;
+
+  //Render attributes
+  public float positionX = height / 2;
+  public float positionY = width / 2;
+  public float scaleFactor = min(height, width) / 1000f * 2f;
+  public float rotation = 0;
+  public color fillColor = color(40, 40, 110, 110);
+
 
   public int getLeafs() {
     return this.leafs;
@@ -21,44 +34,50 @@ class Flower {
   }
 
   public void render() {
+    //Consider the breath effect
+    if (breath) {
+      this.leafApertureFactor += breathApertureDelta();
+    }
+
     //Generate a leaf instance
     Leaf l = new Leaf();
     l.apertureFactor = this.leafApertureFactor;
-    l.length = this.leafLength;
-    
-    //To-Do
-    //Consider the breath effect
-    if(breathe) {
-      this.leafApertureFactor += easeInOutElastic(sin(second()));
-    }
-    
+    l.leafLength = this.leafLength;
+
+    //Render options for leafes
+    noStroke();
+    fill(fillColor);
+
     //Render leafes
+    pushMatrix();
+    translate(positionX, positionY);
+    scale(scaleFactor);
+    rotate(rotation);
     for (int i = 0; i < leafs; i++) {
       pushMatrix();
       rotate(i * stepAngle);
       l.render();
       popMatrix();
     }
-    
     //Draw white circle in the middle
     fill(255);
     noStroke();
     circle(0, 0, leafLength / 2.2);
+    popMatrix();
   }
+ 
 
-  /**
-   * @param  x  absolute progress of the animation in the bounds of 0 (beginning of the animation) and 1 (end of animation)
-   * @return breath progress (between 0 and 1)
-   * @author https://easings.net/en#easeInOutElastic
-   */
-  private float easeInOutElastic(float x) {
-    float c5 = (2 * PI) / 4.5;
-
-    return x == 0 ? 0 
-      : x == 1 
-      ? 1 
-      : x < 0.5 
-      ? -(pow(2, 20 * x - 10) * sin((20 * x - 11.125) * c5)) / 2 
-      : (pow(2, -20 * x + 10) * sin((20 * x - 11.125) * c5)) / 2 + 1;
+  private float breathApertureDelta() {
+    float breathStep = leafApertureFactor / breathWeaknessFactor;
+    float timeFactor = breathCurrentTimeStep > breathDuration / 2f ? abs(breathCurrentTimeStep - breathDuration) : breathCurrentTimeStep;
+    float breathDelta = breathStep * timeFactor;
+    breathCurrentTimeStep = breathCurrentTimeStep >= breathDuration 
+      ? 0 : breathCurrentTimeStep >= (breathDuration - (breathDuration / 20f)) 
+      ? breathCurrentTimeStep + 0.5f 
+      : breathCurrentTimeStep <= (0f + (breathDuration / 20f)) 
+      ? breathCurrentTimeStep + 0.5f 
+      : breathCurrentTimeStep + 1f;
+    //System.out.println("breathStep: " + breathStep + " - timeFactor" + timeFactor + " - breathCurrentTimeStep:" + breathCurrentTimeStep + " - breathDuration:" + breathDuration + " - breathDelta: " + breathDelta);
+    return breathDelta;
   }
 }
