@@ -1,10 +1,12 @@
 //Flower
 Flower f;
-int leafs = 8;
+FlowerMode flowerMode = FlowerMode.STATIC;
+int leafs;
 int leafApertureFactor = 180;
 
 //Fonts
 PFont harabaraMais30;
+PFont aileronUL10;
 PFont aileronUL12;
 
 //Mouse drag
@@ -21,7 +23,11 @@ void setup() {
 
   //Initalize fonts
   harabaraMais30 = createFont("HarabaraMaisDemo.otf", 30);
-  aileronUL12 = createFont("aileron.ultralight.otf", 12);
+  aileronUL10 = createFont("aileron.thin.otf", 10);
+  aileronUL12 = createFont("aileron.thin.otf", 12);
+
+  //Initialize envoriment variables
+  leafs = int(random(6, 11));
 
   //Initalize main flower
   f = new Flower();
@@ -34,13 +40,17 @@ void draw() {
   //Text: Draw title
   drawTextTitle();
 
+  //Text: Draw mode
+  drawTextMode();
+
   //Flower: Set attributes
+  f.flowerMode = FlowerMode.STATIC;
   f.setLeafs(leafs);
   f.leafApertureFactor = leafApertureFactor;
   f.fillColor = color(40, 40, 110, 110);
 
   //Flower: Set effects
-  f.breath = true;
+  f.flowerMode = flowerMode;
   f.breathDuration = 400;
   f.breathWeaknessFactor = 1200;
 
@@ -68,6 +78,16 @@ void mouseWheel(MouseEvent event) {
   }
 }
 
+void keyPressed() {
+  if (key == ' ') {
+    flowerMode = flowerMode.next();
+  } else if (key == '+') {
+    leafs++;
+  } else if (key == '-') {
+    leafs--;
+  }
+}
+
 void drawTextTitle() {
   pushMatrix();
   scale(min(height, width) / 1000f * 2);
@@ -76,5 +96,19 @@ void drawTextTitle() {
   text("Computergrafik.", 35, 35);
   textFont(aileronUL12);
   text("The leaf count is our main effort in life and shoulb be " + leafs, 35, 75);
+  popMatrix();
+}
+
+void drawTextMode() {
+  pushMatrix();
+  translate(width - 20, height - 20);
+  scale(min(height, width) / 1000f * 2);
+  textFont(aileronUL10);
+  textAlign(RIGHT, BOTTOM);
+  String mode = "[" + flowerMode + "]";
+  textSize(10);
+  text(mode, 0, 0);
+  stroke(255);
+  strokeWeight(1);
   popMatrix();
 }

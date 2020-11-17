@@ -1,5 +1,8 @@
+import processing.sound.*;
+
 class Flower {
   //Flower attributes
+  public FlowerMode flowerMode = FlowerMode.STATIC;
   private int leafs = 8;
   private float stepAngle = TWO_PI / leafs;
 
@@ -7,11 +10,16 @@ class Flower {
   public float leafApertureFactor = 300;
   public float leafLength = 100;
 
-  //Breath attributes
-  public boolean breath = false;
+  //Breath animation mode attributes
   public float breathDuration = 400;
   public float breathWeaknessFactor = 1200;
   private float breathCurrentTimeStep = 0;
+
+  //Music animation mode attributes
+
+
+  //Rotation animation mode attributes
+  private float rotationAnimation;
 
   //Render attributes
   public float positionX = height / 2;
@@ -31,41 +39,61 @@ class Flower {
   }
 
   public Flower() {
+    playAudio();
   }
 
   public void render() {
-    //Consider the breath effect
-    if (breath) {
-      this.leafApertureFactor += breathApertureDelta();
-    }
 
-    //Generate a leaf instance
+    //Generate: a leaf instance
     Leaf l = new Leaf();
     l.apertureFactor = this.leafApertureFactor;
     l.leafLength = this.leafLength;
 
-    //Render options for leafes
+    //Leaf: Consider the breath effect
+    if (flowerMode == FlowerMode.BREATHING) {
+      //Manipulates the aperture factor for breathing - overwrites default values directly inside the leaf to preserve the original factor
+      l.apertureFactor += breathApertureDelta();
+    } else {
+      //Resets the time steps for breath if mode was changed during runtime to reset progress
+      breathCurrentTimeStep = 0;
+    }
+
+    //Leaf: Consider the music mode
+    {
+      
+    }
+
+    //Leaf: Render options for leafes
     noStroke();
     fill(fillColor);
 
-    //Render leafes
+    //Flower: Transform flower
     pushMatrix();
     translate(positionX, positionY);
     scale(scaleFactor);
-    rotate(rotation);
+    if (flowerMode == FlowerMode.ROTATE) {
+      rotate(rotationAnimation);
+      rotationAnimation += radians(0.25);
+    } else {
+      rotate(rotation);
+    }
+
+    //Leaf: Render leafes
     for (int i = 0; i < leafs; i++) {
       pushMatrix();
       rotate(i * stepAngle);
       l.render();
       popMatrix();
     }
-    //Draw white circle in the middle
+
+
+    //Circle: Draw white circle in the middle
     fill(255);
     noStroke();
     circle(0, 0, leafLength / 2.2);
     popMatrix();
   }
- 
+
 
   private float breathApertureDelta() {
     float breathStep = leafApertureFactor / breathWeaknessFactor;
@@ -79,5 +107,19 @@ class Flower {
       : breathCurrentTimeStep + 1f;
     //System.out.println("breathStep: " + breathStep + " - timeFactor" + timeFactor + " - breathCurrentTimeStep:" + breathCurrentTimeStep + " - breathDuration:" + breathDuration + " - breathDelta: " + breathDelta);
     return breathDelta;
+  }
+
+  private void playAudio() {
+     SoundFile file = new SoundFile(ProcessingMeilenstein2.this, dataPath("pogo.mp3"));
+     file.play();
+  }
+}
+
+enum FlowerMode {
+  STATIC, BREATHING, ROTATE, MUSIC;
+  private static FlowerMode[] vals = values();
+  public FlowerMode next()
+  {
+    return vals[(this.ordinal()+1) % vals.length];
   }
 }
