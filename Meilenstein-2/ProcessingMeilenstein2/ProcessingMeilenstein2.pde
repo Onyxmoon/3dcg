@@ -1,3 +1,7 @@
+//General
+color textColor;
+ColorPalette randomCuratedColorPalette;
+
 //Flower
 Flower f;
 FlowerMode flowerMode = FlowerMode.STATIC;
@@ -27,15 +31,18 @@ void setup() {
   aileronUL12 = createFont("aileron.thin.otf", 12);
 
   //Initialize envoriment variables
-  leafs = int(random(6, 11));
+  leafs = int(random(8, 16));
+
+  //Initalize colors
+  randomCuratedColorPalette = randomCuratedColorPalette();
 
   //Initalize main flower
-  f = new Flower();
+  f = new Flower(this);
 }
 
 void draw() {
   //Background: Draw solid color
-  background(130, 101, 255);
+  background(randomCuratedColorPalette.background);
 
   //Text: Draw title
   drawTextTitle();
@@ -44,10 +51,10 @@ void draw() {
   drawTextMode();
 
   //Flower: Set attributes
-  f.flowerMode = FlowerMode.STATIC;
   f.setLeafs(leafs);
   f.leafApertureFactor = leafApertureFactor;
-  f.fillColor = color(40, 40, 110, 110);
+  f.fillColor = randomCuratedColorPalette.foreground;
+  f.midpointColor = color(255);
 
   //Flower: Set effects
   f.flowerMode = flowerMode;
@@ -85,6 +92,13 @@ void keyPressed() {
     leafs++;
   } else if (key == '-') {
     leafs--;
+  } else if (key == 'c') {
+    ColorPalette newColor = randomCuratedColorPalette();
+    while(newColor.equals(randomCuratedColorPalette))
+    {
+      newColor = randomCuratedColorPalette();
+    }
+    randomCuratedColorPalette = newColor;
   }
 }
 
@@ -93,6 +107,7 @@ void drawTextTitle() {
   scale(min(height, width) / 1000f * 2);
   textFont(harabaraMais30);
   textAlign(LEFT, TOP);
+  fill(randomCuratedColorPalette.accent);
   text("Computergrafik.", 35, 35);
   textFont(aileronUL12);
   text("The leaf count is our main effort in life and shoulb be " + leafs, 35, 75);
@@ -107,8 +122,23 @@ void drawTextMode() {
   textAlign(RIGHT, BOTTOM);
   String mode = "[" + flowerMode + "]";
   textSize(10);
+  fill(randomCuratedColorPalette.accent);
   text(mode, 0, 0);
   stroke(255);
   strokeWeight(1);
   popMatrix();
+}
+
+ColorPalette randomCuratedColorPalette() {
+  ColorPalette[] curatedColorPalette = { 
+    new ColorPalette(color(130, 101, 255), color(40, 40, 110, 110), color(255)),
+    new ColorPalette(color(62, 60, 65), color(240, 88, 103, 110), color(255)),
+    new ColorPalette(color(240, 88, 103), color(255, 244, 80, 110), color(255)),
+    new ColorPalette(color(255, 50, 47), color(225, 225, 225, 150), color(255)),
+    new ColorPalette(color(189, 190, 192), color(60, 58, 59, 110), color(255))
+  };
+  
+  java.util.Random r = new java.util.Random();
+
+  return curatedColorPalette[r.nextInt(curatedColorPalette.length)];
 }

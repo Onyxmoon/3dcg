@@ -34,11 +34,26 @@
 
 
 
+## Notes
+
+- Four modes
+  Switch with Spacebar
+- Random curated colour
+  Press c
+
+
+
 ## Demo
-![](Meilenstein-2/README.assets/image-20201112013944803.png)
 
+![](Meilenstein-2/README.assets/image-20201117205456211.png)
 
+![](Meilenstein-2/README.assets/image-20201117205423992.png)
 
+![](Meilenstein-2/README.assets/image-20201117205539252.png)
+
+![](Meilenstein-2/README.assets/image-20201117205440309.png)
+
+![](Meilenstein-2/README.assets/image-20201117205557312.png)
 
 ## Contact
 
@@ -46,10 +61,36 @@
 
 
 
+## Sources and third-party licenses
+
+### Music
+
+Watching You from the Pogo.
+All rights reserved by Pogo.
+Available free of charge at [Bandcamp](https://pogomix.bandcamp.com/album/weightless)
+
+### Fonts
+
+#### Harabara Mais Demo
+
+Font Demo available only on the website Dafont. No other site is authorized to distribute this font.
+This source is not free for commercial use.
+For full font and commercial use license, please contact the author.
+
+More info send email to: [harabarafont@gmail.com](mailto:harabarafont@gmail.com)
+
+#### Ageo Personal Use
+
+Thanks for your appreciation! This font is made for personal use. If you want a commercial version, you can get it at [ekobimantara.com/sansserif/ageo/](https://ekobimantara.com/sansserif/ageo/)
+
+Check also our deep discounted products at our website super sale here: [ekobimantara.com/super-sale/](
+
 ## License
 
 Copyright 2020 Philipp Borucki.<br/>
 This project is licensed under a proprietary license and is limited to the restrictions of intellectual property rights for academic writing and submission of laboratory work.
+
+
 
 
 ***
