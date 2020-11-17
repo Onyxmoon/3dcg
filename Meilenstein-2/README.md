@@ -31,6 +31,7 @@
 ## Realization
 
 - The implementation occured with [Processing](https://processing.org/) 3.5.4.
+- The [Processing Sound](https://processing.org/reference/libraries/sound/) library is required
 
 
 
