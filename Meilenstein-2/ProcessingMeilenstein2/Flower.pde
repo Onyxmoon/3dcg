@@ -21,6 +21,10 @@ class Flower {
   private String soundFileName = "PogoWeightlessWatchingYou.wav";
   private FFT fft;
   private SoundFile soundFile;
+  private float[]scoresBass = new float[5];
+  private float[]scoresTreble = new float[5];
+  private float scoreBass = 0;
+  private float scoreTreble = 0;
 
   //Rotation animation mode attributes
   private float rotationAnimation;
@@ -54,7 +58,7 @@ class Flower {
     fft = new FFT(parentApplet, 8);
     fft.input(soundFile);
   }
-  
+
   public Flower(PApplet parentApplet, String soundFileName) {
     //Parent applet as music playback endpoint
     this.parentApplet = parentApplet;
@@ -91,14 +95,21 @@ class Flower {
     if (flowerMode == FlowerMode.BREATHING) {
       //Manipulates the aperture factor for breathing - overwrites default values directly inside the leaf to preserve the original factor
       l.apertureFactor += breathApertureDelta();
+      //automatic rotation
+      rotate(rotationAnimation);
+      rotationAnimation += radians(0.01);
+      //input roation
       rotate(rotation);
     } else if (flowerMode == FlowerMode.MUSIC) {
+      //start music - if not started
       playMusic();
+      //animate leafes in sync with music
       float[] bassTrebleAmplitude = musicAperatureFactor();
-      l.apertureFactor = leafApertureFactor * bassTrebleAmplitude[0];
-      l.leafLength = leafLength * bassTrebleAmplitude[1];
+      l.apertureFactor = l.apertureFactor * bassTrebleAmplitude[0];
+      l.leafLength = l.leafLength * bassTrebleAmplitude[1];
+      //rotate in sync with music
       rotate(rotationAnimation);
-      rotationAnimation += radians(bassTrebleAmplitude[2]);
+      rotationAnimation += radians(bassTrebleAmplitude[2] * 5);
     } else if (flowerMode == FlowerMode.ROTATE) {
       rotate(rotationAnimation);
       rotationAnimation += radians(0.25);
@@ -124,7 +135,7 @@ class Flower {
     //Circle: Draw white circle in the middle
     fill(midpointColor);
     noStroke();
-    circle(0, 0, leafLength / 2.2);
+    circle(0, 0, l.leafLength / 2.2);
     popMatrix();
   }
 
@@ -145,16 +156,60 @@ class Flower {
 
   private float[] musicAperatureFactor() {
 
-    float bass = (fft.analyze()[0] + fft.analyze()[1] + fft.analyze()[2] + fft.analyze()[3]) / 4f;
-    float normalizedBass = -map(bass, 0, 1, 1, 1.4);
+    for (int i = 1; i < scoresBass.length; i++) {
+      scoresBass[i-1] = scoresBass[i];
+    }
 
-    float treble = (fft.analyze()[4] + fft.analyze()[5] + fft.analyze()[6] + fft.analyze()[7]) / 4f;
-    float normalizedTreble = map(treble, 0, 1, 1, 1.7);
+    scoresBass[scoresBass.length-1] = (fft.analyze()[0] + fft.analyze()[1] + fft.analyze()[2] + fft.analyze()[3]) / 4f;
+
+
+    scoreBass = 0;
+
+    for (float element : scoresBass) {
+      scoreBass += element;
+    }
+
+    scoreBass /= (float)scoresBass.length;
+
+    for (int i = 1; i < scoresTreble.length; i++) {
+      scoresTreble[i-1] = scoresTreble[i];
+    }
+
+    scoresTreble[scoresTreble.length-1] = (fft.analyze()[4] + fft.analyze()[5] + fft.analyze()[6] + fft.analyze()[7]) / 4f;
+
+    scoreTreble = 0;
+
+    for (float element : scoresTreble) {
+      scoreTreble += element;
+    }
+
+    scoreTreble /= (float)scoresTreble.length;
+
+    //oldBass = scoreBass;
+    //oldTreble = scoreTreble;
+
+
+    //scoreTreble = 0;
+
+    //scoreBass += (fft.analyze()[0] + fft.analyze()[1] + fft.analyze()[2] + fft.analyze()[3]) / 4f;
+    //scoreTreble += (fft.analyze()[4] + fft.analyze()[5] + fft.analyze()[6] + fft.analyze()[7]) / 4f;
+
+
+    //if (oldBass > scoreBass && scoreBass > 0.025) {
+    //  scoreBass = oldBass - 0.025;
+    //}
+
+    //if (oldTreble > scoreTreble && scoreTreble > 0.0025) {
+    //  scoreTreble = oldTreble - 0.0025;
+    //}
+
+    float normalizedBass = -map(scoreBass, 0, 1, 1.1, 0.7);
+    float normalizedTreble = map(scoreTreble, 0, 1, 1, 2.5);
 
     float amplitude = (fft.analyze()[0] + fft.analyze()[1] + fft.analyze()[2] + fft.analyze()[3] 
       + fft.analyze()[4] + fft.analyze()[5] + fft.analyze()[6] + fft.analyze()[7]) / 8f;
-    
-    float[] bt = { normalizedBass, normalizedTreble, amplitude };
+
+    float[] bt = { normalizedBass, normalizedTreble, amplitude};
 
     return bt;
   }
@@ -162,7 +217,7 @@ class Flower {
   private void playMusic() {
     if (!soundFile.isPlaying()) {
       soundFile.play();
-    } 
+    }
   }
 
   private void pauseMusic() {
