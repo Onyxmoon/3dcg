@@ -69,6 +69,11 @@ void draw() {
 
   //Flower: Draw Flower
   f.render();
+  
+  //Application: Music mode
+  //if(f.scoreBass > 0.4 || f.scoreTreble > 0.4) {
+  //  randomCuratedColorPalette = randomCuratedColorPalette();
+  //}
 
   System.out.println(frameRate);
 }
