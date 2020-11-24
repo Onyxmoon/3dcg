@@ -9,6 +9,7 @@
 > This folder contains the Processing Sketch and other documents for Task Sheet 2 in the 3D Computer Graphics Lab.
 
 ## Task
+
 [PDF document](Meilenstein-2/Arbeitsblatt2.pdf) for task sheet 2.
 
 **Summary of the task to be processed for the Processing-Sketch**
@@ -33,18 +34,29 @@
 - The implementation occured with [Processing](https://processing.org/) 3.5.4.
 - The [Processing Sound](https://processing.org/reference/libraries/sound/) library is required
 
+## Changes (New features)
 
+- Adds modes for the flower
+  - Static mode - Flower is static, can be rotated with dragging the mouse
+  - Breathing mode - Flower is breathing, can be rotated with dragging the mouse
+  - Rotate mode - Flower is rotating
+  - Music mode - Flower is dancing to music. Interchangeable music file in code.
 
-## Notes
+## Usage (Key/Mouse map)
 
-- Four modes
-  Switch with Spacebar
-- Random curated colour
-  Press c
+- Keyboard
+  - ```Spacebar``` : Switch between four modes [Static, Breathing, Rotate, Music]
+  - ```c``` : Change color to a new random curated colour
+- Mouse
+  - ```Mouse wheel up``` : Increase leaf count of the flower
+  - ```Mouse wheel down``` : Decrease leaf count of the flower
+  - ```Left mouse click``` : Drag mouse to rotate flower in specific modes [Static, Breathing]. 
 
 
 
 ## Demo
+
+![Demo Video - Flower in music mode](Meilenstein-2/README.assets/ProcessingMeilenstein2DemoVideoMusicCompressed.mp4)
 
 ![](Meilenstein-2/README.assets/image-20201117205456211.png)
 
