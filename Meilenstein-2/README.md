@@ -8,12 +8,6 @@
 
 > This folder contains the Processing Sketch and other documents for Task Sheet 2 in the 3D Computer Graphics Lab.
 
-
-
-[[_TOC_]]
-
-
-
 ## Task
 
 [PDF document](Meilenstein-2/Arbeitsblatt2.pdf) for task sheet 2.
