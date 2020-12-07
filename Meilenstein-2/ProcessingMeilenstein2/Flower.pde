@@ -96,8 +96,8 @@ class Flower {
       //Manipulates the aperture factor for breathing - overwrites default values directly inside the leaf to preserve the original factor
       l.apertureFactor += breathApertureDelta();
       //automatic rotation
-      rotate(rotationAnimation);
-      rotationAnimation += radians(0.01);
+      //rotate(rotationAnimation);
+      //rotationAnimation += radians(0.01);
       //input roation
       rotate(rotation);
     } else if (flowerMode == FlowerMode.MUSIC) {
@@ -109,7 +109,7 @@ class Flower {
       l.leafLength = l.leafLength * bassTrebleAmplitude[1];
       //rotate in sync with music
       rotate(rotationAnimation);
-      rotationAnimation += radians(bassTrebleAmplitude[2] * 5);
+      rotationAnimation += radians(bassTrebleAmplitude[2] * 2.5);
     } else if (flowerMode == FlowerMode.ROTATE) {
       rotate(rotationAnimation);
       rotationAnimation += radians(0.25);
