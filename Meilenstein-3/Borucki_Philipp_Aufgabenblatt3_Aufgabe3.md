@@ -44,13 +44,13 @@ $`
 ##### v1To2
 
 $`
-\left|\vec{v1To2}\right|  = \sqrt{\sum\limits_{i = 1}^{2}{(v1To2_{i})^2} } =  \sqrt{(-6)^2+(-4)^2} = \sqrt{50}
+\left|\vec{v1To2}\right|  = \sqrt{\sum\limits_{i = 1}^{2}{(v1To2_{i})^2} } =  \sqrt{(-6)^2+(-4)^2} = \sqrt{52} \approx 7.211
 `$
 
 ##### v1To3
 
 $`
-\left|\vec{v1To3}\right|  = \sqrt{\sum\limits_{i = 1}^{2}{(v1To3_{i})^2} } =  \sqrt{(1)^2+(-6)^2} = \sqrt{37}  
+\left|\vec{v1To3}\right|  = \sqrt{\sum\limits_{i = 1}^{2}{(v1To3_{i})^2} } =  \sqrt{(1)^2+(-6)^2} = \sqrt{37} \approx 6.083  
 `$
 
 
@@ -78,13 +78,13 @@ $`
 ##### Länge bestimmen
 
 $`
-\left|\vec{v2To3}\right|  = \sqrt{\sum\limits_{i = 1}^{2}{(v2To3_{i})^2} } =  \sqrt{(7)^2+(-2)^2} = \sqrt{53}
+\left|\vec{v2To3}\right|  = \sqrt{\sum\limits_{i = 1}^{2}{(v2To3_{i})^2} } =  \sqrt{(7)^2+(-2)^2} = \sqrt{53} \approx 7.280
 `$
 
 ##### Abstand
 
 $`
-\text{Abstand} = \left|\vec{v2To3}\right| = \sqrt{53}
+\text{Abstand} = \left|\vec{v2To3}\right| = \sqrt{53} \approx 7.280
 `$
 
 
@@ -126,7 +126,7 @@ $`
 ##### v1To2 normalisieren
 
 $`
-\vec{nv1To2} = \frac{\vec{v1To2}}{\lvert \vec{v1To2} \rvert} =  \left ( \begin{matrix} \frac{-6}{\sqrt{50} }  \\ \frac{-4}{\sqrt{50} }  \end{matrix}  \right ) \approx \left ( \begin{matrix} -0.849 \\ -0.566 \end{matrix}  \right )
+\vec{nv1To2} = \frac{\vec{v1To2}}{\lvert \vec{v1To2} \rvert} =  \left ( \begin{matrix} \frac{-6}{\sqrt{52} }  \\ \frac{-4}{\sqrt{52} }  \end{matrix}  \right ) \approx \left ( \begin{matrix} -0.832 \\ -0.555 \end{matrix}  \right )
 `$
 
 #####  v1To3 normalisieren
@@ -148,7 +148,7 @@ $`
 #### Lösung
 
 $`
-\alpha = \cos^{-1}\left(\frac{\vec{v1To2}\cdot\vec{v1To3}}{\left|\vec{v1To2}\right|\cdot\left|\vec{v1To3}\right|  } \right) = \cos^{-1}\left(\frac{(-6\cdot1) + (-4\cdot-6)}{\sqrt{50} \space \cdot \space \sqrt{37}  } \right) \approx \cos^{-1}(0,4185) \approx 1,139
+\alpha = \cos^{-1}\left(\frac{\vec{v1To2}\cdot\vec{v1To3}}{\left|\vec{v1To2}\right|\cdot\left|\vec{v1To3}\right|  } \right) = \cos^{-1}\left(\frac{(-6\cdot1) + (-4\cdot-6)}{\sqrt{52} \space \cdot \space \sqrt{37}  } \right) \approx \cos^{-1}(0,410) \approx 1,148
 `$
 
 
