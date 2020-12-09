@@ -5,6 +5,8 @@
 Es ist ein Dreieck mit folgenden Eckpunkten gegeben:
 p1 = (2, 3); p2 = (-4, -1); p3 = (3, -3)
 
+![Aufgabenblatt3Aufgabe3Graph](Meilenstein-3/Borucki_Philipp_Aufgabenblatt3_Aufgabe3.assets/Aufgabenblatt3Aufgabe3Graph.svg)
+
 ### a) Konstruiert folgende Vektoren
 
 #### Formel
@@ -102,13 +104,13 @@ $`
 ##### v1To2 skaliert mit -2
 
 $`
-\vec{v2To3} \space \cdot -2 = \left ( \begin{matrix} (-6)\cdot(-2) \\ (-4)\cdot(-2) \end{matrix}  \right ) = \left ( \begin{matrix} 12 \\ 8 \end{matrix}  \right )
+\vec{v1To2} \space \cdot -2 = \left ( \begin{matrix} (-6)\cdot(-2) \\ (-4)\cdot(-2) \end{matrix}  \right ) = \left ( \begin{matrix} 12 \\ 8 \end{matrix}  \right )
 `$
 
 ##### v1To2 skaliert mit 3
 
 $`
-\vec{v2To3} \space \cdot 3 = \left ( \begin{matrix} (-6)\cdot3 \\ (-4)\cdot3 \end{matrix}  \right ) = \left ( \begin{matrix} -18 \\ -12 \end{matrix}  \right )
+\vec{v1To2} \space \cdot 3 = \left ( \begin{matrix} (-6)\cdot3 \\ (-4)\cdot3 \end{matrix}  \right ) = \left ( \begin{matrix} -18 \\ -12 \end{matrix}  \right )
 `$
 
 
