@@ -5,7 +5,7 @@
 Es ist ein Dreieck mit folgenden Eckpunkten gegeben:
 p1 = (2, 3); p2 = (-4, -1); p3 = (3, -3)
 
-![Aufgabenblatt3Aufgabe3Graph](Meilenstein-3/Borucki_Philipp_Aufgabenblatt3_Aufgabe3.assets/Aufgabenblatt3Aufgabe3Graph.svg)
+![Aufgabenblatt3Aufgabe3Graph](Meilenstein-3/Borucki_Philipp_Aufgabenblatt3_Aufgabe3.assets/Aufgabenblatt3Aufgabe3Graph.png)
 
 ### a) Konstruiert folgende Vektoren
 
