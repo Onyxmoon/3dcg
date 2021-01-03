@@ -16,7 +16,7 @@ public class Circle {
     public float rotationX = 0;
     public float rotationY = 0;
     public float rotationZ = 0;
-    public float scale = 1;
+    public float scale = 1f;
     public PVector position = new PVector(0,0, 0);
 
 

@@ -20,7 +20,7 @@ public class Cylinder {
     public float rotationX = 0;
     public float rotationY = 0;
     public float rotationZ = 0;
-    public float scale = 1;
+    public float scale = 1f;
     public PVector position = new PVector(0,0,0);
 
 
@@ -59,7 +59,7 @@ public class Cylinder {
         //Render plate
         Circle c = new Circle(PARENT_APP);
         c.radius = this.radius;
-        c.strokeWeight = this.strokeWeight;
+        c.strokeWeight = this.strokeWeight / this.scale;
         c.segments = this.baseSegments;
         c.render();
 

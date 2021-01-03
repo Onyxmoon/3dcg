@@ -85,7 +85,7 @@ public class CoordinateSystem {
         PARENT_APP.pushMatrix();
         PARENT_APP.fill(this.colorY);
         PARENT_APP.stroke(this.strokeColorY);
-        PARENT_APP.rotateX(PApplet.radians(90));
+        PARENT_APP.rotateX(PApplet.radians(270));
         renderShape();
         PARENT_APP.popMatrix();
         //Optional z-axis

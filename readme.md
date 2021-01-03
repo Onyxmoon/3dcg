@@ -29,7 +29,7 @@
 
 ## License
 
-Copyright 2020 Philipp Borucki.<br/>
+Copyright 2021 Philipp Borucki.<br/>
 This project is licensed under a proprietary license and is limited to the restrictions of intellectual property rights for academic writing and submission of laboratory work.
 
 ***

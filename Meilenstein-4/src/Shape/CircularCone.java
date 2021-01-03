@@ -51,7 +51,7 @@ public class CircularCone {
         Circle c = new Circle(PARENT_APP);
         c.radius = this.radius;
         c.segments = this.segments;
-        c.strokeWeight = this.strokeWeight;
+        c.strokeWeight = this.strokeWeight / this.scale;
         c.render();
 
         //Render lateral surface
