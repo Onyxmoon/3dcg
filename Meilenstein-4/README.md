@@ -61,13 +61,21 @@
 
 ## Usage (Key/Mouse map)
 
+- Mouse
+  - `Left mouse click` : translate the coordinate system
+  - `Right mouse click` : rotate the coordinate system
 - Keyboard
+  - `s` : Select shape [NONE, CIRCULAR CONE, CYLINDER]
+  - `m` : Select manipulation mode
+  - `+/-` : Manipulate value of selected manipulation mode
 
 
 
 ## Demo
 
+![image-20210104014131111](Meilenstein-4/README.assets/image-20210104014131111.png)
 
+![image-20210104014150318](Meilenstein-4/README.assets/image-20210104014150318.png)
 
 ## Contact
 
