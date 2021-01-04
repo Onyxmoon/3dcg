@@ -16,6 +16,7 @@
 - [Meilenstein 1](Meilenstein-1/)
 - [Meilenstein 2](Meilenstein-2/)
 - [Meilenstein 3](Meilenstein-3/)
+- [Meilenstein 4](Meilenstein-4/)
 
 
 
@@ -28,7 +29,9 @@
 
 ## License
 
-Copyright 2020 Philipp Borucki.<br/>
+Copyright 2021 Philipp Borucki.<br/>
 This project is licensed under a proprietary license and is limited to the restrictions of intellectual property rights for academic writing and submission of laboratory work.
+
+The use for demonstration purposes, especially in teaching and research, is expressly desired and permitted.
 
 ***
