@@ -130,8 +130,6 @@ public class Meilenstein4 extends PApplet {
         popMatrix();
 
         drawText();
-
-        System.out.println(frameRate);
     }
 
     @Override

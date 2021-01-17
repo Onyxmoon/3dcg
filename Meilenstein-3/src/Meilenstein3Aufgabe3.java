@@ -85,7 +85,7 @@ public class Meilenstein3Aufgabe3{
         /*
          * f) Bestimmt den Winkel zwischen den Vektoren v1To2 und v1To3
          */
-        System.out.println("Aufgabe e)");
+        System.out.println("Aufgabe f)");
         System.out.print("Cosinus des Winkels zwischen v1To2 und v1To3: ");
         System.out.println(v1To2.dot(v1To3) / (v1To2.mag() * v1To3.mag()));
         System.out.print("Winkel zwischen v1To2 und v1To3: ");
