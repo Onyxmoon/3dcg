@@ -64,6 +64,7 @@
     - `m` : Toggle model coordinate system [*default: **off***]
   - Animation control
     - `e` : Toggle explosion [*default: **off***]
+    - `e` : Toggle default animation [*default: **on***]
     - `p` : Toggle music/animation [*default: **off***]
 
 
@@ -73,6 +74,8 @@
 ### Perspective projection
 
 ![image-20210122003738557](Meilenstein-5/README.assets/image-20210122003738557.png)
+
+![image-20210122133734187](Meilenstein-5/README.assets/image-20210122133734187.png)
 
 ![image-20210122003817437](Meilenstein-5/README.assets/image-20210122003817437.png)
 
