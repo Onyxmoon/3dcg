@@ -14,6 +14,7 @@ public class Meilenstein5 extends PApplet {
     CameraMode currentCameraMode = CameraMode.Perspective;
     boolean musicPaused = true;
     boolean explosionInProgress = false;
+    boolean forceAnimation = true;
 
     //// 3D figures
     CoordinateSystem cs;
@@ -228,6 +229,7 @@ public class Meilenstein5 extends PApplet {
             player.play();
         } else {
             musicPaused = true;
+            forceAnimation = false;
             player.pause();
         }
     }
@@ -333,7 +335,7 @@ public class Meilenstein5 extends PApplet {
             cones[i].rotationY += (bandIntensity * (yRotation / 1000)) / 50;
             cones[i].rotationZ += (bandIntensity * (zRotation / 1000)) / 50;
 
-            if (!musicPaused) {
+            if (!musicPaused || forceAnimation) {
                 cones[i].position.z += (1 + (bandIntensity / 5)+ (pow((scoreVolume / 150), 2)));
             }
 
@@ -382,7 +384,7 @@ public class Meilenstein5 extends PApplet {
             cylinders[i].rotationY += (bandIntensity * (yRotation / 1000)) / 10;
             cylinders[i].rotationZ += (bandIntensity * (zRotation / 1000)) / 10;
 
-            if (!musicPaused) {
+            if (!musicPaused || forceAnimation) {
                 cylinders[i].position.z += (1 + (bandIntensity / 5)+ (pow((scoreVolume / 152), 2)));
             }
 
@@ -459,6 +461,8 @@ public class Meilenstein5 extends PApplet {
             showWorldCoordinateSystem = !showWorldCoordinateSystem;
         } else if (key == 'p') {
             toggleMusic();
+        } else if (key == 'a') {
+            forceAnimation = !forceAnimation;
         } else if (key == 'e') {
             if (explosionInProgress) {
                 resetExplosion();
