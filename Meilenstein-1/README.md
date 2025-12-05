@@ -27,13 +27,13 @@
 
 ## Realization
 
-- [PDF document](Meilenstein-1/Borucki_Philipp_3DCG_Aufgabenblatt1.pdf) with solution for the task sheet
+- [PDF document](Borucki_Philipp_3DCG_Aufgabenblatt1.pdf) with solution for the task sheet
 - The implementation occured with [Processing](https://processing.org/) 3.5.4.
 
 
 
 ## Demo
-![](Meilenstein-1/README.assets/image-20201112013944803.png)
+![](README.assets/image-20201112013944803.png)
 
 
 
