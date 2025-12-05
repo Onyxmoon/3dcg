@@ -13,7 +13,7 @@
 
 ## Task
 
-[PDF document](Meilenstein-4/Arbeitsblatt4.pdf) for task sheet 4.
+[PDF document](Arbeitsblatt4.pdf) for task sheet 4.
 
 **Summary of the task to be processed for the Processing-Sketch**
 
@@ -73,9 +73,9 @@
 
 ## Demo
 
-![image-20210104014131111](Meilenstein-4/README.assets/image-20210104014131111.png)
+![image-20210104014131111](README.assets/image-20210104014131111.png)
 
-![image-20210104014150318](Meilenstein-4/README.assets/image-20210104014150318.png)
+![image-20210104014150318](README.assets/image-20210104014150318.png)
 
 ## Contact
 
