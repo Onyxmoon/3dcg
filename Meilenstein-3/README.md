@@ -13,7 +13,7 @@
 
 ## Task
 
-[PDF document](Meilenstein-3/Arbeitsblatt3.pdf) for task sheet 3.
+[PDF document](Arbeitsblatt3.pdf) for task sheet 3.
 
 **Summary of the task to be processed for the Processing-Sketch**
 
@@ -28,14 +28,14 @@
 > Several of your models should be drawn in a circle around the center of the drawing area. The models are to be drawn using the class created in task 1. The radius (distance to the center of the drawing surface), the angular distance between the models, and the size and orientation of the models should be able to be increased and decreased by keyboard input.
 >
 > **Task 3**
-> Task 3 contains exercises of mathematical operations. See [Solutions](Meilenstein-3/Borucki_Philipp_Aufgabenblatt3_Aufgabe3.md).
+> Task 3 contains exercises of mathematical operations. See [Solutions](Borucki_Philipp_Aufgabenblatt3_Aufgabe3.md).
 
 
 
 ## Realization
 
-- [PDF document](Meilenstein-3/Borucki_Philipp_3DCG_Aufgabenblatt3.pdf) with solution for the task sheet
-- [Markdown document](Meilenstein-3/Borucki_Philipp_Aufgabenblatt3_Aufgabe3.md) with the solution for task 3 of the task sheet
+- [PDF document](Borucki_Philipp_3DCG_Aufgabenblatt3.pdf) with solution for the task sheet
+- [Markdown document](Borucki_Philipp_Aufgabenblatt3_Aufgabe3.md) with the solution for task 3 of the task sheet
 - The implementation occured with the [Processing](https://processing.org/) 3.5.4 library (included).
 - IntelliJ IDEA Ultimate 2020.2 development environment has been used.
 
@@ -53,9 +53,9 @@
 
 ## Demo
 
-![](Meilenstein-3/README.assets/image-20201208030442891.png)
+![](README.assets/image-20201208030442891.png)
 
-![](Meilenstein-3/README.assets/image-20201208030553003.png)
+![](README.assets/image-20201208030553003.png)
 
 ## Contact
 
