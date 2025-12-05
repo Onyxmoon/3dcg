@@ -10,7 +10,7 @@
 
 ## Task
 
-[PDF document](Meilenstein-2/Arbeitsblatt2.pdf) for task sheet 2.
+[PDF document](Arbeitsblatt2.pdf) for task sheet 2.
 
 **Summary of the task to be processed for the Processing-Sketch**
 
@@ -58,15 +58,15 @@
 
 ![Demo Video - Flower in music mode](Meilenstein-2/README.assets/ProcessingMeilenstein2DemoVideoMusicCompressed.mp4)
 
-![](Meilenstein-2/README.assets/image-20201117205456211.png)
+![](README.assets/image-20201117205456211.png)
 
-![](Meilenstein-2/README.assets/image-20201117205423992.png)
+![](README.assets/image-20201117205423992.png)
 
-![](Meilenstein-2/README.assets/image-20201117205539252.png)
+![](README.assets/image-20201117205539252.png)
 
-![](Meilenstein-2/README.assets/image-20201117205440309.png)
+![](README.assets/image-20201117205440309.png)
 
-![](Meilenstein-2/README.assets/image-20201117205557312.png)
+![](README.assets/image-20201117205557312.png)
 
 ## Contact
 
