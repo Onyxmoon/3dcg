@@ -14,7 +14,7 @@
 
 ## Task
 
-[PDF document](Meilenstein-5/Arbeitsblatt5.pdf) for task sheet 5.
+[PDF document](Arbeitsblatt5.pdf) for task sheet 5.
 
 **Summary of the task to be processed for the Processing-Sketch**
 
@@ -73,47 +73,47 @@
 
 ### Perspective projection
 
-![image-20210122003738557](Meilenstein-5/README.assets/image-20210122003738557.png)
+![image-20210122003738557](README.assets/image-20210122003738557.png)
 
-![image-20210122133734187](Meilenstein-5/README.assets/image-20210122133734187.png)
+![image-20210122133734187](README.assets/image-20210122133734187.png)
 
-![image-20210122003817437](Meilenstein-5/README.assets/image-20210122003817437.png)
+![image-20210122003817437](README.assets/image-20210122003817437.png)
 
-![image-20210122003903151](Meilenstein-5/README.assets/image-20210122003903151.png)
+![image-20210122003903151](README.assets/image-20210122003903151.png)
 
-![image-20210122003949350](Meilenstein-5/README.assets/image-20210122003949350.png)
+![image-20210122003949350](README.assets/image-20210122003949350.png)
 
 ### Orthographic camera
 
-![image-20210122004030884](Meilenstein-5/README.assets/image-20210122004030884.png)
+![image-20210122004030884](README.assets/image-20210122004030884.png)
 
-![image-20210122004057044](Meilenstein-5/README.assets/image-20210122004057044.png)
+![image-20210122004057044](README.assets/image-20210122004057044.png)
 
 ### X-parallel
 
-![image-20210122004207435](Meilenstein-5/README.assets/image-20210122004207435.png)
+![image-20210122004207435](README.assets/image-20210122004207435.png)
 
-![image-20210122004122381](Meilenstein-5/README.assets/image-20210122004122381.png)
+![image-20210122004122381](README.assets/image-20210122004122381.png)
 
 ### Y-parallel
 
-![image-20210122004237665](Meilenstein-5/README.assets/image-20210122004237665.png)
+![image-20210122004237665](README.assets/image-20210122004237665.png)
 
-![image-20210122004140363](Meilenstein-5/README.assets/image-20210122004140363.png)
+![image-20210122004140363](README.assets/image-20210122004140363.png)
 
 ### Z-parallel
 
-![image-20210122004300616](Meilenstein-5/README.assets/image-20210122004300616.png)
+![image-20210122004300616](README.assets/image-20210122004300616.png)
 
-![image-20210122004409853](Meilenstein-5/README.assets/image-20210122004409853.png)
+![image-20210122004409853](README.assets/image-20210122004409853.png)
 
 
 
 ### Isometric
 
-![image-20210122004322624](Meilenstein-5/README.assets/image-20210122004322624.png)
+![image-20210122004322624](README.assets/image-20210122004322624.png)
 
-![image-20210122004355203](Meilenstein-5/README.assets/image-20210122004355203.png)
+![image-20210122004355203](README.assets/image-20210122004355203.png)
 
 
 ## Contact
